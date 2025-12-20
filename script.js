@@ -19,11 +19,12 @@ console.log(``);
 console.log(typeof gender);
 console.log(`and my gender is ${gender}`);
 
-document.getElementById("userName").textContent = `my name is ${userName}`;
+document.getElementById("Name").textContent = `my name is ${userName}`;
 document.getElementById("age").textContent = `my age is ${age}`;
 document.getElementById("gender").textContent = `my age is ${gender}`;
 */
 
+/*
 //arithmetic operator
 let students = 30;
 
@@ -62,3 +63,15 @@ students--;
 
 let precedence = 1 + 2 - 2 * (10 - 2);
 console.log(precedence);
+*/
+
+document.getElementById("submit").onclick = function () {
+  let username = document.getElementById("userName").value;
+
+  if (!username) {
+    window.alert(`state your username`);
+    return;
+  }
+
+  window.alert(`Hello ${username}`);
+};
