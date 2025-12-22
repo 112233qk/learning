@@ -65,6 +65,7 @@ let precedence = 1 + 2 - 2 * (10 - 2);
 console.log(precedence);
 */
 
+/* accepting user input
 document.getElementById("submit").onclick = function () {
   let username = document.getElementById("userName").value;
 
@@ -75,3 +76,23 @@ document.getElementById("submit").onclick = function () {
 
   window.alert(`Hello ${username}`);
 };
+*/
+
+const input = window.prompt("please enter your age");
+function checkage() {
+  if (input === null) {
+    window.alert(`inpur cancelled`);
+    return;
+  }
+  if (input === "") {
+    window.alert(`please state your age`);
+    return;
+  }
+  const age = Number(input);
+  if (Number.isNaN(age)) {
+    window.alert(`please state your age in number`);
+    return;
+  }
+  window.alert(`your age is ${age}`);
+}
+checkage();

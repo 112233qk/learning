@@ -18,13 +18,14 @@
 body {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   background-color: rgb(53, 53, 53);
 }
 
-#container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
