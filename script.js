@@ -1,4 +1,5 @@
 /*
+//use html line from 10-15
 //data type
 
 //string
@@ -66,6 +67,7 @@ console.log(precedence);
 */
 
 /* accepting user input
+//use html line from 16-23
 document.getElementById("submit").onclick = function () {
   let username = document.getElementById("userName").value;
 
@@ -78,10 +80,12 @@ document.getElementById("submit").onclick = function () {
 };
 */
 
+/*
+//changing data type
 const input = window.prompt("please enter your age");
 function checkage() {
   if (input === null) {
-    window.alert(`inpur cancelled`);
+    window.alert(`input cancelled`);
     return;
   }
   if (input === "") {
@@ -96,3 +100,29 @@ function checkage() {
   window.alert(`your age is ${age}`);
 }
 checkage();
+*/
+
+//using const
+const PI = 3.14; //it is recommended to use all capital for const primitive data (number and boolean)
+let radius = window.prompt(
+  `please enter radius to calculate circumference of circle`
+);
+let circumference;
+function circumferenceOfCircle() {
+  if (radius === null) {
+    window.alert(`input cancelled`);
+    return;
+  }
+  if (radius === "") {
+    window.alert(`please state your radius`);
+    return;
+  }
+  radius = Number(radius);
+  if (Number.isNaN(radius)) {
+    window.alert(`please state your radius in number`);
+    return;
+  }
+  circumference = 2 * PI * radius;
+  window.alert(`your radius of circle is ${circumference}`);
+}
+circumferenceOfCircle();
