@@ -58,3 +58,38 @@ h1 {
   padding-bottom: 10px;
   padding-top: 5px;
 }
+
+#containerCounter {
+  flex-direction: row;
+}
+
+#div-counterValue {
+  padding: 20px;
+  font-size: 40px;
+}
+
+#decreaseBtn,
+#resetBtn,
+#increaseBtn {
+  border-radius: 7px;
+  padding: 5px;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  box-shadow: -5px 5px 10px var(--shadow);
+  transition: 0.25s;
+}
+
+#decreaseBtn:hover,
+#resetBtn:hover,
+#increaseBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+#decreaseBtn:active,
+#resetBtn:active,
+#increaseBtn:active {
+  background-color: white;
+  color: black;
+}

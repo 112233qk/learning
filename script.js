@@ -102,6 +102,7 @@ function checkage() {
 checkage();
 */
 
+/*
 //using const
 const PI = 3.14; //it is recommended to use all capital for const primitive data (number and boolean)
 let radius = window.prompt(
@@ -126,3 +127,22 @@ function circumferenceOfCircle() {
   window.alert(`your radius of circle is ${circumference}`);
 }
 circumferenceOfCircle();
+*/
+
+const deacreaseBtn = document.getElementById("decreaseBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+let counter = 0;
+
+deacreaseBtn.onclick = function () {
+  counter--;
+  document.getElementById("counterValue").textContent = `${counter}`;
+};
+increaseBtn.onclick = function () {
+  counter++;
+  document.getElementById("counterValue").textContent = `${counter}`;
+};
+resetBtn.onclick = function () {
+  counter = 0;
+  document.getElementById("counterValue").textContent = `${counter}`;
+};
