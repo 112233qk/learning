@@ -129,6 +129,7 @@ function circumferenceOfCircle() {
 circumferenceOfCircle();
 */
 
+/* counting a number (increase and decrease)
 const deacreaseBtn = document.getElementById("decreaseBtn");
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -146,3 +147,28 @@ resetBtn.onclick = function () {
   counter = 0;
   document.getElementById("counterValue").textContent = `${counter}`;
 };
+*/
+
+//Math = built-in object that provide a collection of properties and methods
+
+let testing = 3.256;
+let x = 45;
+let y = 2;
+let z;
+
+//z = Math.round(testing);      rounding a number
+//z = Math.floor(testing);      rounds down to the nearest whole number
+//z = Math.ceil(testing);       rounds up to the nearest whole number
+//z = Math.trunc(testing);      removes the decimal part (keeps integer only)
+//z = Math.pow(testing, y);     raises testing to the power of n (testingⁿ)
+//z = Math.sqrt(testing);       square root of testing
+//z = Math.log(testing);        natural logarithm of testing (base e)
+//z = Math.sin(x);              sine of x (in radians)
+//z = Math.cos(x);              cosine of x (in radians)
+//z = Math.tan(x);              tangent of x (in radians)
+//z = Math.abs(testing);        absolute value of testing (makes negative → positive)
+//z = Math.sign(x);             returns sign of x (-1, 0, or 1)
+//z = Math.max(testing, x, z);  returns the largest value among the numbers
+//z = Math.min(testing, x, z);  returns the smallest value among the numbers
+
+console.log(z);
