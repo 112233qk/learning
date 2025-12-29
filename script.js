@@ -149,6 +149,7 @@ resetBtn.onclick = function () {
 };
 */
 
+/*
 //Math = built-in object that provide a collection of properties and methods
 
 let testing = 3.256;
@@ -172,3 +173,13 @@ let z;
 //z = Math.min(testing, x, z);  returns the smallest value among the numbers
 
 console.log(z);
+*/
+
+let randomButton = document.getElementById("roll");
+let randomNum;
+
+randomButton.onclick = function () {
+  randomNum = Math.floor(Math.random() * 6) + 1;
+  document.getElementById("randomValue").textContent = `${randomNum}`;
+  console.log(randomNum);
+};

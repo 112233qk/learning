@@ -59,18 +59,19 @@ h1 {
   padding-top: 5px;
 }
 
-#containerCounter {
+.div-div {
   flex-direction: row;
 }
 
-#div-counterValue {
+.containerValue {
   padding: 20px;
   font-size: 40px;
 }
 
 #decreaseBtn,
 #resetBtn,
-#increaseBtn {
+#increaseBtn,
+#roll {
   border-radius: 7px;
   padding: 5px;
   font-weight: 600;
@@ -82,14 +83,16 @@ h1 {
 
 #decreaseBtn:hover,
 #resetBtn:hover,
-#increaseBtn:hover {
+#increaseBtn:hover,
+#roll:hover {
   background-color: black;
   color: white;
 }
 
 #decreaseBtn:active,
 #resetBtn:active,
-#increaseBtn:active {
+#increaseBtn:active,
+#roll:active {
   background-color: white;
   color: black;
 }
