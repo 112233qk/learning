@@ -68,10 +68,7 @@ h1 {
   font-size: 40px;
 }
 
-#decreaseBtn,
-#resetBtn,
-#increaseBtn,
-#roll {
+.submit {
   border-radius: 7px;
   padding: 5px;
   font-weight: 600;
@@ -81,18 +78,16 @@ h1 {
   transition: 0.25s;
 }
 
-#decreaseBtn:hover,
-#resetBtn:hover,
-#increaseBtn:hover,
-#roll:hover {
+.submit:hover {
   background-color: black;
   color: white;
 }
 
-#decreaseBtn:active,
-#resetBtn:active,
-#increaseBtn:active,
-#roll:active {
+.submit:active {
   background-color: white;
   color: black;
+}
+
+#user-age {
+  padding: 5px;
 }

@@ -68,7 +68,7 @@ console.log(precedence);
 
 /* accepting user input
 //use html line from 16-23
-document.getElementById("submit").onclick = function () {
+document.getElementById("submitName").onclick = function () {
   let username = document.getElementById("userName").value;
 
   if (!username) {
@@ -114,12 +114,12 @@ function circumferenceOfCircle() {
     window.alert(`input cancelled`);
     return;
   }
-  if (radius === "") {
+  else if (radius === "") {
     window.alert(`please state your radius`);
     return;
   }
   radius = Number(radius);
-  if (Number.isNaN(radius)) {
+  else if (Number.isNaN(radius)) {
     window.alert(`please state your radius in number`);
     return;
   }
@@ -130,6 +130,7 @@ circumferenceOfCircle();
 */
 
 /* counting a number (increase and decrease)
+use html line from 24-31
 const deacreaseBtn = document.getElementById("decreaseBtn");
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -175,6 +176,8 @@ let z;
 console.log(z);
 */
 
+/*
+use html line from 32-37
 let randomButton = document.getElementById("roll");
 let randomNum;
 
@@ -182,4 +185,49 @@ randomButton.onclick = function () {
   randomNum = Math.floor(Math.random() * 6) + 1;
   document.getElementById("randomValue").textContent = `${randomNum}`;
   console.log(randomNum);
+};
+*/
+
+const ageValue = document.getElementById("userAge");
+const ageSubmit = document.getElementById("submitAge");
+let userAge;
+
+ageSubmit.onclick = function () {
+  let userAgevalue = ageValue.value;
+
+  if (!userAgevalue.trim()) {
+    window.alert("please enter your age in number");
+    return;
+  }
+
+  let userAge = Number(userAgevalue);
+
+  if (Number.isNaN(userAge)) {
+    window.alert("please enter your age in number only");
+    return;
+  }
+
+  if (userAge >= 130) {
+    window.alert("how are you still alive");
+  } else if (userAge >= 100) {
+    window.alert("Damm you are very old");
+  } else if (userAge >= 60) {
+    window.alert("you are old");
+  } else if (userAge >= 30) {
+    window.alert("you are adult");
+  } else if (userAge >= 20) {
+    window.alert("you are still finding direction life");
+  } else if (userAge >= 18) {
+    window.alert("welcome to adult word");
+  } else if (userAge >= 15) {
+    window.alert("you are teenager");
+  } else if (userAge >= 10) {
+    window.alert("you are young");
+  } else if (userAge >= 5) {
+    window.alert("you are very young");
+  } else if (userAge >= 0) {
+    window.alert("you  just born");
+  } else {
+    window.alert("what");
+  }
 };
