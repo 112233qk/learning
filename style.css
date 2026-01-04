@@ -17,11 +17,11 @@
 
 body {
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  grid-auto-rows: 260px;
+  align-content: center;
   justify-content: center;
-  gap: 12px;
   background-color: rgb(53, 53, 53);
 }
 
@@ -38,6 +38,26 @@ body {
   border-color: var(--thertiary);
   box-shadow: -5px 5px 10px var(--shadow);
   background-color: var(--primary);
+}
+
+.submit {
+  border-radius: 7px;
+  padding: 5px;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  box-shadow: -5px 5px 10px var(--shadow);
+  transition: 0.25s;
+}
+
+.submit:hover {
+  background-color: black;
+  color: white;
+}
+
+.submit:active {
+  background-color: white;
+  color: black;
 }
 
 p,
@@ -68,26 +88,24 @@ h1 {
   font-size: 40px;
 }
 
-.submit {
-  border-radius: 7px;
+#user-age {
   padding: 5px;
-  font-weight: 600;
-  text-align: center;
-  background-color: white;
-  box-shadow: -5px 5px 10px var(--shadow);
-  transition: 0.25s;
 }
 
-.submit:hover {
-  background-color: black;
+.divCheckBox {
+  flex-direction: row;
+  cursor: default;
+  margin: 5px;
+  padding: 5px;
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--thertiary);
+  box-shadow: -5px 5px 10px var(--shadow);
+  background-color: var(--primary);
   color: white;
 }
 
-.submit:active {
-  background-color: white;
-  color: black;
-}
-
-#user-age {
-  padding: 5px;
+#submitCheckBox {
+  margin: 10px;
 }

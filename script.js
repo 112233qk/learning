@@ -176,8 +176,8 @@ let z;
 console.log(z);
 */
 
-/*
-use html line from 32-37
+/* random generator
+//use html line from 32-37
 let randomButton = document.getElementById("roll");
 let randomNum;
 
@@ -188,6 +188,8 @@ randomButton.onclick = function () {
 };
 */
 
+/* if statement
+//use html line from 38-45
 const ageValue = document.getElementById("userAge");
 const ageSubmit = document.getElementById("submitAge");
 let userAge;
@@ -229,5 +231,26 @@ ageSubmit.onclick = function () {
     window.alert("you  just born");
   } else {
     window.alert("what");
+  }
+};
+*/
+
+//.checked = property that determine the checked state of an
+//           HTML checkbox or radio button element
+//use html line from 46-60
+const maleCheckBox = document.getElementById("maleCheckBox");
+const femaleCheckBox = document.getElementById("femaleCheckBox");
+const apacheCheckBox = document.getElementById("apacheCheckBox");
+const submitCheckBox = document.getElementById("submitCheckBox");
+
+submitCheckBox.onclick = function () {
+  if (maleCheckBox.checked) {
+    window.alert(`you're male`);
+  } else if (femaleCheckBox.checked) {
+    window.alert(`you're female`);
+  } else if (apacheCheckBox.checked) {
+    window.alert(`you're helicopter`);
+  } else {
+    window.alert(`please select something`);
   }
 };
