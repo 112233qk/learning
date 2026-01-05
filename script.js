@@ -235,6 +235,7 @@ ageSubmit.onclick = function () {
 };
 */
 
+/*
 //.checked = property that determine the checked state of an
 //           HTML checkbox or radio button element
 //use html line from 46-60
@@ -254,3 +255,27 @@ submitCheckBox.onclick = function () {
     window.alert(`please select something`);
   }
 };
+*/
+
+// ? ternary operator = a shortcutto if {} and else{} statements
+//                      help to assign a variable based on a condition
+//                      condition ? codeIfTrue : codeIfFalse;
+
+let no = 10;
+let howmuch =
+  no > 10 ? "the number is more than 10" : "the number is less than 10";
+console.log(howmuch);
+
+let price = 40;
+let discount = price >= 50 ? 10 : 0;
+console.log(`the price is ${price}`);
+console.log(`your dicount is ${price * (discount / 100)}`);
+console.log(`your total is ${price - price * (discount / 100)}`);
+
+let human1 = true;
+let species1 = human1 ? "human" : "not human";
+console.log(`you're ${species1}`);
+
+let human2 = false;
+let species2 = human2 ? "human" : "not human";
+console.log(`you're ${species2}`);
