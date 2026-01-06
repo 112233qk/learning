@@ -257,7 +257,8 @@ submitCheckBox.onclick = function () {
 };
 */
 
-// ? ternary operator = a shortcutto if {} and else{} statements
+/*
+// ? ternary operator = a shortcut to if {} and else{} statements
 //                      help to assign a variable based on a condition
 //                      condition ? codeIfTrue : codeIfFalse;
 
@@ -279,3 +280,55 @@ console.log(`you're ${species1}`);
 let human2 = false;
 let species2 = human2 ? "human" : "not human";
 console.log(`you're ${species2}`);
+*/
+
+// SWITCH = can be an efficient replacement to many else if statements
+let day = 1;
+
+switch (day) {
+  case 1:
+    console.log("monday");
+    break;
+  case 2:
+    console.log("sunday");
+    break;
+  case 3:
+    console.log("tuesday");
+    break;
+  case 4:
+    console.log("wednesday");
+    break;
+  case 5:
+    console.log("thrusday");
+    break;
+  case 6:
+    console.log("friday");
+    break;
+  case 7:
+    console.log("saturday");
+    break;
+  default:
+    console.log(`${day} this is not a day`);
+}
+
+let score = "jkhkjashdf";
+let resultTest;
+let resulAnswer;
+
+switch (true) {
+  case score >= 70:
+    resultTest = "Pass";
+    console.log(`your score is ${score}`);
+    break;
+  case score < 70:
+    resultTest = "fail";
+    console.log(`your score is ${score}`);
+    break;
+  default:
+    console.log(`${score} is not a test score`);
+}
+if (resultTest === undefined) {
+  console.log("there is a error in the score");
+} else {
+  console.log(`you ${resultTest} the test`);
+}
