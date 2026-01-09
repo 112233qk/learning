@@ -335,6 +335,7 @@ if (resultTest === undefined) {
 }
 */
 
+/*
 // string methods = allow to manipulate and work with text (strings)
 let resultString = function (StringMethod) {
   console.log(StringMethod.length); //13
@@ -376,3 +377,18 @@ let resultString = function (StringMethod) {
   console.log(StringMethod);
 };
 resultString("  Abc  Defg  ");
+*/
+
+//Method chaining = calling one method after another
+//                  in one continuous line of code.
+let username = window.prompt("name pleawse");
+
+if (!username) {
+  window.alert("ERROR");
+  console.log(`${username}`);
+} else {
+  username =
+    username.trim().charAt(0).toUpperCase() +
+    username.trim().slice(1).toLowerCase();
+  window.alert(`hello ${username}`);
+}
