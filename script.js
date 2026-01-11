@@ -379,6 +379,7 @@ let resultString = function (StringMethod) {
 resultString("  Abc  Defg  ");
 */
 
+/*
 //Method chaining = calling one method after another
 //                  in one continuous line of code.
 let username = window.prompt("name pleawse");
@@ -392,3 +393,69 @@ if (!username) {
     username.trim().slice(1).toLowerCase();
   window.alert(`hello ${username}`);
 }
+*/
+/*
+// Logical operator = used to combine or manipulate boolean values (true or false)
+
+                      AND = &&
+                      OR  = ||
+                      NOT = !
+function nomerLogicalOperation(value) {
+  if (!value) {
+    console.log(`error "${value}" is not a number `);
+    return;
+  } else {
+    console.log(`fine ${value} is a number`);
+  }
+
+  if (value <= 10 && value >= 0) {
+    console.log("around 0-10");
+  } else {
+    console.log("not aroun 0-10");
+  }
+
+  if (value <= 0 || value >= 10) {
+    console.log("around 0-10");
+  } else {
+    console.log("not around 0-10");
+  }
+}
+nomerLogicalOperation(5);
+nomerLogicalOperation(123);
+nomerLogicalOperation(-123);
+nomerLogicalOperation(false);
+*/
+
+//   = assigment operator
+//  == comparison operator (compare if values are equal)
+// === strict equality operator (compare if value & datatype are equal)
+//  != inequality operator
+// !== strict inequality operator
+
+function strictEquality(value) {
+  if (value == 10) {
+    console.log(`${value} is 10`);
+  } else {
+    console.log(`false`);
+  }
+
+  if (value === 10) {
+    console.log(`${value} is 10 in NUMBER`);
+  } else {
+    console.log(`false`);
+  }
+
+  if (value != 10) {
+    console.log(`${value} is not 10`);
+  } else {
+    console.log(`${value} is 10`);
+  }
+
+  if (value !== 10) {
+    console.log(` ${value} is not 10`);
+  } else {
+    console.log(` ${value} is 10 in number`);
+  }
+}
+strictEquality(10);
+strictEquality(15);
