@@ -426,6 +426,8 @@ nomerLogicalOperation(-123);
 nomerLogicalOperation(false);
 */
 
+/*
+//STRICT EQUALITY
 //   = assigment operator
 //  == comparison operator (compare if values are equal)
 // === strict equality operator (compare if value & datatype are equal)
@@ -459,3 +461,18 @@ function strictEquality(value) {
 }
 strictEquality(10);
 strictEquality(15);
+*/
+
+//while loop = repeat some code WHILE some condition is true
+
+function whileLoop() {
+  let value;
+
+  do {
+    value = window.prompt("please enter value");
+  } while (value === null || value.trim() === "");
+
+  window.alert(`your value is ${value}`);
+}
+
+whileLoop();
