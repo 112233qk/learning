@@ -463,6 +463,7 @@ strictEquality(10);
 strictEquality(15);
 */
 
+/*
 //while loop = repeat some code WHILE some condition is true
 
 function whileLoop() {
@@ -476,3 +477,17 @@ function whileLoop() {
 }
 
 whileLoop();
+*/
+
+// for loop = repeat some code a LIMITED amount of times
+
+function forWhile() {
+  for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+      continue;
+    } else {
+      console.log(i);
+    }
+  }
+}
+forWhile();
