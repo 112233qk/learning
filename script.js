@@ -479,6 +479,7 @@ function whileLoop() {
 whileLoop();
 */
 
+/*
 // for loop = repeat some code a LIMITED amount of times
 
 function forWhile() {
@@ -491,3 +492,50 @@ function forWhile() {
   }
 }
 forWhile();
+*/
+
+function randomGuessingGame() {
+  const minNumb = 1;
+  const maxNumb = 10;
+  let answer = Math.floor(Math.random() * (maxNumb - minNumb + 1) + minNumb);
+  let attempts = 0;
+  let guess;
+  let running = true;
+
+  while (running) {
+    guess = window.prompt(
+      `guess the number between ${minNumb} - ${maxNumb}
+       your current attempts is ${attempts}`
+    );
+    attempts++;
+    // if the user cancel the window prompt
+    if (guess == null) {
+      window.alert("game is cancelled");
+      break;
+    }
+    // else user proceed changing the guess value into a number
+    else {
+      guess = Number(guess);
+      // if the value is nan remind the user
+      if (isNaN(guess) || guess < minNumb || guess > maxNumb) {
+        window.alert("please put a value between 1 - 10");
+        attempts++;
+      }
+      // else proceed
+      else {
+        if (guess > answer) {
+          window.alert("the number is to HIGH!");
+        } else if (guess < answer) {
+          window.alert("the number is to LOW!");
+        } else {
+          window.alert(
+            `you guess ${answer} is correct your attempt is ${attempts}`
+          );
+          running = false;
+        }
+      }
+    }
+  }
+  // console.log(answer);
+}
+randomGuessingGame();
