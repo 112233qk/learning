@@ -109,3 +109,10 @@ h1 {
 #submitCheckBox {
   margin: 10px;
 }
+
+#divAnswer {
+  flex-direction: row;
+}
+#user-Answer {
+  padding: 5px;
+}
