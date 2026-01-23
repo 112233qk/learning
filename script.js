@@ -67,7 +67,7 @@ console.log(precedence);
 */
 
 /* accepting user input
-//use html line from 16-23
+//use html line from 17-24
 document.getElementById("submitName").onclick = function () {
   let username = document.getElementById("userName").value;
 
@@ -130,7 +130,7 @@ circumferenceOfCircle();
 */
 
 /* counting a number (increase and decrease)
-use html line from 24-31
+use html line from 26-33
 const deacreaseBtn = document.getElementById("decreaseBtn");
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -177,7 +177,7 @@ console.log(z);
 */
 
 /* random generator
-//use html line from 32-37
+//use html line from 35-40
 let randomButton = document.getElementById("roll");
 let randomNum;
 
@@ -189,7 +189,7 @@ randomButton.onclick = function () {
 */
 
 /* if statement
-//use html line from 38-45
+//use html line from 42-49
 const ageValue = document.getElementById("userAge");
 const ageSubmit = document.getElementById("submitAge");
 let userAge;
@@ -238,7 +238,7 @@ ageSubmit.onclick = function () {
 /*
 //.checked = property that determine the checked state of an
 //           HTML checkbox or radio button element
-//use html line from 46-60
+//use html line from 51-65
 const maleCheckBox = document.getElementById("maleCheckBox");
 const femaleCheckBox = document.getElementById("femaleCheckBox");
 const apacheCheckBox = document.getElementById("apacheCheckBox");
@@ -493,6 +493,9 @@ function forWhile() {
 }
 forWhile();
 */
+
+/*
+//use html line from 67-74
 const playGame = document.getElementById("playGame");
 const submitAnswer = document.getElementById("submitAnswer");
 
@@ -531,3 +534,117 @@ playGame.onclick = function () {
     answerValue.value = "";
   };
 };
+*/
+
+/*
+//function = A section of usable code.
+//           Declare code once, use it whenever you want
+//           Call the function to execute that code.
+
+function Math(x, y) {
+  let result = x + y;
+  return result;
+}
+let MathResult = Math(10, 5);
+console.log(MathResult);
+*/
+
+function Array() {
+  let fruits = ["apple", "coconut", "banana"];
+
+  function indexFruits() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log(fruits.length);
+
+    console.log(fruits.indexOf("coconut"));
+
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[2]);
+  }
+
+  function push() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log("push");
+    fruits.push("hello");
+    // add element
+    console.log(fruits);
+  }
+
+  function pop() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log("pop");
+    fruits.pop();
+    //removes last element
+    console.log(fruits);
+  }
+
+  function unshift() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log("unshift");
+    fruits.unshift("hello");
+    //add element to beginning
+    console.log(fruits);
+  }
+
+  function shift() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log("shift");
+    fruits.shift();
+    //remove element from beginning
+    console.log(fruits);
+  }
+
+  function arrayFor() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    console.log("Forloop");
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i]);
+    }
+
+    console.log("");
+
+    for (let i = fruits.length - 1; i >= 0; i--) {
+      console.log(fruits[i]);
+    }
+
+    console.log("");
+    for (let fruit of fruits) {
+      console.log(fruit);
+    }
+  }
+
+  function sort() {
+    let fruits = ["apple", "coconut", "banana"];
+
+    fruits.sort();
+    console.log(fruits);
+
+    fruits.sort().reverse();
+    console.log(fruits);
+  }
+
+  //indexFruits();
+  //console.log("");
+  //console.log("unchangeArray");
+  //console.log(fruits);
+  //console.log("");
+  //push();
+  //console.log("");
+  //pop();
+  //console.log("");
+  //unshift();
+  //console.log("");
+  //shift();
+  //console.log("");
+  //arrayFor();
+  //console.log("");
+  //sort();
+}
+Array();
