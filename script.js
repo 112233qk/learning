@@ -549,6 +549,10 @@ let MathResult = Math(10, 5);
 console.log(MathResult);
 */
 
+/*
+// array = a variable like structure that can
+//         hold more than 1 value
+
 function Array() {
   let fruits = ["apple", "coconut", "banana"];
 
@@ -648,3 +652,27 @@ function Array() {
   //sort();
 }
 Array();
+*/
+
+// 2D array = multi-dimensional array that store a matrix
+//            of data in rows and collums.
+//            useful for games, spreadsheets, or representing image
+
+function ddArray() {
+  let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+
+  matrix[1][1] = "hello";
+
+  for (let row of matrix) {
+    const rowString = row.join(` `);
+    console.log(rowString);
+  }
+
+  //  console.log(matrix);
+}
+
+ddArray();
