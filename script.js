@@ -654,6 +654,7 @@ function Array() {
 Array();
 */
 
+/*
 // 2D array = multi-dimensional array that store a matrix
 //            of data in rows and collums.
 //            useful for games, spreadsheets, or representing image
@@ -676,3 +677,27 @@ function ddArray() {
 }
 
 ddArray();
+*/
+
+// spread operator = . . . allow an iterable such as an
+//                   array or string to be expanded
+//                   into seperate elements
+//                   (unpacks the elements)
+
+function spreadOperator() {
+  let alphabet = ["a", "b", "c", "d", "e"];
+
+  let numb = [1, 2, 3, 4, 5];
+  console.log(numb);
+  console.log(...numb);
+
+  let numbMax = Math.max(...numb);
+  console.log(numbMax);
+
+  let numbMin = Math.min(...numb);
+  console.log(numbMin);
+
+  let multArray = [...numb, ...alphabet, "hello"];
+  console.log(multArray);
+}
+spreadOperator();
