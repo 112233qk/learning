@@ -679,6 +679,7 @@ function ddArray() {
 ddArray();
 */
 
+/*
 // spread operator = . . . allow an iterable such as an
 //                   array or string to be expanded
 //                   into seperate elements
@@ -701,3 +702,49 @@ function spreadOperator() {
   console.log(multArray);
 }
 spreadOperator();
+*/
+
+//rest parameters = (...rest) allow a function work
+//                  with variable number of argument
+//                  by bundling them into array
+
+//                  spread = expands an array into
+//                  seperate elements
+
+//                  rest = bundle separate elements into array
+
+function restParameters() {
+  let food1 = "cherry";
+  let food2 = "banana";
+  let food3 = "ice cream";
+  let food4 = "egg";
+  let food5 = "yogurt";
+
+  function foodBundling(...foods) {
+    console.log(foods);
+  }
+
+  function math(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+      result += number;
+    }
+    return result;
+  }
+
+  let firstName = "javier";
+  let middleName = "lincold";
+  let lastName = "III";
+
+  function fullName(...names) {
+    console.log(...names);
+  }
+
+  foodBundling(food1, food2, food3, food4, food5);
+
+  let result = math(1, 3, 5);
+  console.log(result);
+
+  fullName(firstName, middleName, lastName);
+}
+restParameters();
