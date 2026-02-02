@@ -704,6 +704,7 @@ function spreadOperator() {
 spreadOperator();
 */
 
+/*
 //rest parameters = (...rest) allow a function work
 //                  with variable number of argument
 //                  by bundling them into array
@@ -748,3 +749,52 @@ function restParameters() {
   fullName(firstName, middleName, lastName);
 }
 restParameters();
+*/
+
+//Random password generator
+
+const passwordLength = 20;
+const includesLowerCase = true;
+const includesUpperCase = true;
+const includesNumber = true;
+const includesSymbol = true;
+
+function generatePassword(length, lowerCase, upperCase, number, symbol) {
+  let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  let upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let numberChars = "123456789";
+  let symbolChars = "!@#$%^&*()_+-=";
+
+  let allowedChars = "";
+  let password = "";
+
+  allowedChars += lowerCase ? lowercaseChars : "";
+  allowedChars += upperCase ? upperCaseChars : "";
+  allowedChars += number ? numberChars : "";
+  allowedChars += symbol ? symbolChars : "";
+
+  if (length <= 0) {
+    return `password minimun is length 1`;
+  }
+  if (allowedChars.length === 0) {
+    return `at least 1 set of character need to be check`;
+  }
+
+  for (i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * allowedChars.length);
+    password += allowedChars[randomIndex];
+  }
+
+  //console.log(randomIndex);
+  return password;
+}
+
+const password = generatePassword(
+  passwordLength,
+  includesLowerCase,
+  includesUpperCase,
+  includesNumber,
+  includesSymbol
+);
+
+console.log(`generate Password is [ ${[password]} ]`);
