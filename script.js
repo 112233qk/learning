@@ -751,6 +751,7 @@ function restParameters() {
 restParameters();
 */
 
+/*
 //Random password generator
 
 const passwordLength = 20;
@@ -798,3 +799,18 @@ const password = generatePassword(
 );
 
 console.log(`generate Password is [ ${[password]} ]`);
+*/
+
+// callback = a function that is passed as an argument
+//            to another fucntion
+
+sum(displayResult, 1, 3);
+
+function sum(callback, x, y) {
+  let result = x + y;
+  callback(result);
+}
+
+function displayResult(result) {
+  console.log(result);
+}
