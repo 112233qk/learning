@@ -801,6 +801,7 @@ const password = generatePassword(
 console.log(`generate Password is [ ${[password]} ]`);
 */
 
+/*
 // callback = a function that is passed as an argument
 //            to another fucntion
 
@@ -813,4 +814,40 @@ function sum(callback, x, y) {
 
 function displayResult(result) {
   console.log(result);
+}
+*/
+
+//forEach() = method used to iterate over the elements
+//            of an array and apply a specified function (callback)
+//            to each element
+
+//            array.forEach(callback)
+//            element, index, array are provided
+
+let num = [1, 2, 3, 4, 5];
+
+num.forEach(double);
+num.forEach(displayNum);
+
+function double(element, index, array) {
+  array[index] = element * 2;
+}
+
+function displayNum(element) {
+  console.log(element);
+}
+
+let fruit = ["apple", "orange", "banana", "coconut"];
+
+fruit.forEach(capitalize);
+fruit.forEach(displayNum);
+
+function capitalize(element, index, array) {
+  array[index] =
+    element.trim().charAt(0).toUpperCase() +
+    element.trim().slice(1).toLowerCase();
+}
+
+function displayFruits(element) {
+  console.log(element);
 }
