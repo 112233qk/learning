@@ -817,6 +817,7 @@ function displayResult(result) {
 }
 */
 
+/*
 //forEach() = method used to iterate over the elements
 //            of an array and apply a specified function (callback)
 //            to each element
@@ -850,4 +851,41 @@ function capitalize(element, index, array) {
 
 function displayFruits(element) {
   console.log(element);
+}
+*/
+
+/*
+// .map() = accepts a callback and applies that function
+//          to each element of an array, then return a new array
+
+const number = [2, 3, 4, 5];
+const square = number.map(squares);
+
+function squares(element) {
+  return Math.pow(element, 2);
+}
+
+console.log(square);
+
+const date = ["2020-1-10", "2020-5-20", "2020-3-20", "2020-6-10"];
+const formatted = date.map(format);
+
+function format(element) {
+  const part = element.split("-");
+  return `${part[1]}/${part[2]}/${part[0]}/`;
+}
+
+console.log(formatted);
+*/
+
+// .filter() = create a new array by filtering
+//             out element
+
+let num = [1, 2, 3, 4, 5, 6, 7];
+let even = num.filter(evenFilter);
+
+console.log(even);
+
+function evenFilter(element) {
+  return element % 2 === 0;
 }
