@@ -878,6 +878,7 @@ function format(element) {
 console.log(formatted);
 */
 
+/*
 // .filter() = create a new array by filtering
 //             out element
 
@@ -888,4 +889,30 @@ console.log(even);
 
 function evenFilter(element) {
   return element % 2 === 0;
+}
+*/
+
+// .reduce() = reduce teh elements of an array
+//             to a single value
+
+const price = [10, 20, 39, 50, 60];
+
+const total = price.reduce(totalPrice);
+const max = price.reduce(maxPrice);
+const min = price.reduce(minPrice);
+
+console.log(total);
+console.log(max);
+console.log(min);
+
+function totalPrice(accumulator, elements) {
+  return accumulator + elements;
+}
+
+function maxPrice(accumulator, elements) {
+  return Math.max(accumulator, elements);
+}
+
+function minPrice(accumulator, elements) {
+  return Math.min(accumulator, elements);
 }
