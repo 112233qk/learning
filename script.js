@@ -892,6 +892,7 @@ function evenFilter(element) {
 }
 */
 
+/*
 // .reduce() = reduce teh elements of an array
 //             to a single value
 
@@ -916,3 +917,20 @@ function maxPrice(accumulator, elements) {
 function minPrice(accumulator, elements) {
   return Math.min(accumulator, elements);
 }
+*/
+
+//function declaration = define a reusable block of code
+//                       that performs a specific task
+
+function hello() {
+  console.log("Hello word");
+}
+hello();
+
+// function expression = a way to define function as
+//                       value or variable
+
+const Pizza = function () {
+  console.log("Pizza");
+};
+Pizza();
