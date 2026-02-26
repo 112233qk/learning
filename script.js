@@ -919,6 +919,7 @@ function minPrice(accumulator, elements) {
 }
 */
 
+/*
 //function declaration = define a reusable block of code
 //                       that performs a specific task
 
@@ -934,3 +935,37 @@ const Pizza = function () {
   console.log("Pizza");
 };
 Pizza();
+*/
+
+/*
+// arrow fucntion = a concise way to write fucntion expression
+//                  good for simple functions that you use only once
+//                  (parameter) => some code
+
+const hello = () => console.log("hello");
+hello();
+
+const nameAge = (name, age) => {
+  console.log(`hello ${name}`);
+  console.log(`you are ${age} year old`);
+};
+
+nameAge("xia", 18);
+*/
+
+// object = A collection of related properties and/or methods
+//          Can represent real world objects (people, product, place)
+//          object = {key:value,
+//                    function()}
+
+let person1 = {
+  firstname: "john",
+  secondname: "xavier",
+  age: 18,
+  class: "mage",
+  fullName: function () {
+    return this.firstname + " " + this.secondname;
+  },
+};
+console.log(person1);
+console.log(person1.fullName());
