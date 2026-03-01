@@ -953,6 +953,7 @@ const nameAge = (name, age) => {
 nameAge("xia", 18);
 */
 
+/*
 // object = A collection of related properties and/or methods
 //          Can represent real world objects (people, product, place)
 //          object = {key:value,
@@ -969,3 +970,42 @@ let person1 = {
 };
 console.log(person1);
 console.log(person1.fullName());
+*/
+
+// this = reference to the object where THIS is used
+//        (the object depends on the immediate context)
+//        person .name = this.name
+
+let rpgChar1 = {
+  name: "John",
+  age: 20,
+  race: "Human",
+  class: "knight",
+  summary: function () {
+    return this.name + " the " + this.race + " " + this.class;
+  },
+};
+
+let rpgChar2 = {
+  name: "Sscar",
+  age: 16,
+  race: "Naga",
+  class: "Rogue",
+  summary: function () {
+    return this.name + " the " + this.race + " " + this.class;
+  },
+};
+
+let rpgChar3 = {
+  name: "Magnus",
+  age: 16,
+  race: "Goliath",
+  class: "Barbarian",
+  summary: function () {
+    return this.name + " the " + this.race + " " + this.class;
+  },
+};
+
+console.log(rpgChar1.summary());
+console.log(rpgChar2.summary());
+console.log(rpgChar3.summary());
