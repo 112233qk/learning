@@ -972,6 +972,7 @@ console.log(person1);
 console.log(person1.fullName());
 */
 
+/*
 // this = reference to the object where THIS is used
 //        (the object depends on the immediate context)
 //        person .name = this.name
@@ -1008,4 +1009,25 @@ let rpgChar3 = {
 
 console.log(rpgChar1.summary());
 console.log(rpgChar2.summary());
+console.log(rpgChar3.summary());
+*/
+
+// contructor = special method for defining
+//              the properties and methods of object
+
+const char = function (name, age, race, cclass) {
+  (this.name = name),
+    (this.age = age),
+    (this.race = race),
+    (this.cclass = cclass),
+    (this.summary = function () {
+      return this.name + " the " + this.race + " " + this.cclass;
+    });
+};
+
+let rpgChar1 = new char("john", 20, "human", "knight");
+console.log(rpgChar1.summary());
+let rpgChar2 = new char("Sscar", 16, "naga", "rogue");
+console.log(rpgChar2.summary());
+let rpgChar3 = new char("Magnus", 16, "goliath", "barbarian");
 console.log(rpgChar3.summary());
