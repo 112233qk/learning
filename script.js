@@ -1012,6 +1012,7 @@ console.log(rpgChar2.summary());
 console.log(rpgChar3.summary());
 */
 
+/*
 // contructor = special method for defining
 //              the properties and methods of object
 
@@ -1031,3 +1032,28 @@ let rpgChar2 = new char("Sscar", 16, "naga", "rogue");
 console.log(rpgChar2.summary());
 let rpgChar3 = new char("Magnus", 16, "goliath", "barbarian");
 console.log(rpgChar3.summary());
+*/
+
+//class = (ES6 feature) provides a more structured and cleaner way to
+//        work with objects compared to traditional constructor functions
+//        ex. statue keyword, encapsulation, inheritance
+
+class product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  display(tax) {
+    console.log(`Product:${this.name}`);
+    console.log(`Product:${this.price}`);
+    const total = this.price + this.price * tax;
+    console.log(`Total price with tax:${total.toFixed(2)}`);
+  }
+}
+
+const product1 = new product("a", 20);
+const product2 = new product("b", 9.99);
+
+product1.display(0.1);
+product2.display(0.1);
