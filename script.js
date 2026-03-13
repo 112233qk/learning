@@ -1034,6 +1034,7 @@ let rpgChar3 = new char("Magnus", 16, "goliath", "barbarian");
 console.log(rpgChar3.summary());
 */
 
+/*
 //class = (ES6 feature) provides a more structured and cleaner way to
 //        work with objects compared to traditional constructor functions
 //        ex. statue keyword, encapsulation, inheritance
@@ -1057,3 +1058,36 @@ const product2 = new product("b", 9.99);
 
 product1.display(0.1);
 product2.display(0.1);
+*/
+
+// static = keyword that defines properties or methods that belong
+//          to a Class itself rather the objects created
+//          from that class (class owns anything static, not the objects)
+
+class user {
+  static userCount = 0;
+
+  constructor(username) {
+    this.username = username;
+    user.userCount++;
+  }
+
+  id() {
+    console.log(`User Name "${this.username}" ID "${user.userCount}"`);
+  }
+}
+
+user1 = new user("a");
+console.log(user1);
+console.log(user.userCount);
+user1.id();
+
+user2 = new user("b");
+console.log(user2);
+console.log(user.userCount);
+user2.id();
+
+user3 = new user("c");
+console.log(user3);
+console.log(user.userCount);
+user3.id();
