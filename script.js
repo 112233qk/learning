@@ -1060,6 +1060,7 @@ product1.display(0.1);
 product2.display(0.1);
 */
 
+/*
 // static = keyword that defines properties or methods that belong
 //          to a Class itself rather the objects created
 //          from that class (class owns anything static, not the objects)
@@ -1091,3 +1092,41 @@ user3 = new user("c");
 console.log(user3);
 console.log(user.userCount);
 user3.id();
+*/
+
+// inherintance = allows a new class to inherit properties and methods
+//                from an exsting class (parent -> child)
+//                helps with code reusability
+
+class actionBook {
+  genre = "action";
+
+  info() {
+    console.log(`this book is ${this.name} from ${this.date}`);
+  }
+
+  avaibility(value) {
+    if (value === true) {
+      console.log("this book is available");
+    } else {
+      console.log("this book is not availabe");
+    }
+  }
+}
+
+class bookA extends actionBook {
+  constructor(name, date, value) {
+    super();
+    this.name = name;
+    this.date = date;
+    this.value = value;
+    this.info();
+    this.avaibility(value);
+  }
+}
+const book1 = new bookA("a", "21", true);
+
+const book2 = new bookA("b", "31", false);
+
+console.log(book1);
+console.log(book2);
