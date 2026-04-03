@@ -338,42 +338,58 @@ if (resultTest === undefined) {
 /*
 // string methods = allow to manipulate and work with text (strings)
 let resultString = function (StringMethod) {
+  
   console.log(StringMethod.length); //13
   // returns the number of characters in the string
+  
   console.log(StringMethod.charAt(2)); // A
   // returns the character at index 2
+  
   console.log(StringMethod.indexOf("D")); // 8
   // returns the first position of "d" in the string
+  
   console.log(StringMethod.lastIndexOf("A")); // 2
-  // returns the last position of "d" in the string
-  console.log(StringMethod.length); // 13
-  // again returns the string length
-  console.log(StringMethod.trim()); // Abc  Defg
+  // returns the last position of "A" in the string
+
+  console.log(StringMethod.trim()); // (Abc  Defg)
   // removes spaces from the beginning and end of the string
+  
   console.log(StringMethod.toUpperCase()); //   ABC  DEFG
   // converts the string to uppercase
+  
   console.log(StringMethod.toLowerCase()); //   abc  defg
   // converts the string to lowercase
+  
   console.log(StringMethod.repeat(2)); //   Abc  Defg    Abc  Defg
   // repeats the string 2 times
+  
   console.log(StringMethod.startsWith("S")); // false
   // checks if the string starts with "S"
+  
   console.log(StringMethod.startsWith(" ")); // true
   // checks if the string starts with a space
+  
   console.log(StringMethod.endsWith("S")); // false
   // checks if the string ends with "S"
+  
   console.log(StringMethod.endsWith(" ")); // true
   // checks if the string ends with a space
+  
   console.log(StringMethod.includes("S")); // false
   // checks if the string contains "S"
+  
   console.log(StringMethod.includes(" ")); // true
   // checks if the string contains a space
+  
   console.log(StringMethod.replaceAll("A", "S")); //   Sbc  Defg
   // replaces all "A" characters with "S"
+  
   console.log(StringMethod.padStart(15, "S")); // SS  Abc  Defg
   // pads the start of the string with "S" until length is 15
+  
   console.log(StringMethod.padEnd(15, "S")); //  Abc  Defg  SS
   // pads the end of the string with "S" until length is 15
+  
   console.log(StringMethod);
 };
 resultString("  Abc  Defg  ");
@@ -1094,6 +1110,7 @@ console.log(user.userCount);
 user3.id();
 */
 
+/*
 // inherintance = allows a new class to inherit properties and methods
 //                from an exsting class (parent -> child)
 //                helps with code reusability
@@ -1130,3 +1147,44 @@ const book2 = new bookA("b", "31", false);
 
 console.log(book1);
 console.log(book2);
+*/
+
+// getter = special method that makes a property readable
+// setter = special method that makes a property writeable
+
+// validate and modify a value when reading/writing a property
+
+class persegi {
+  constructor(sisi) {
+    this.S = sisi;
+  }
+
+  set S(newS) {
+    if (newS > 0) {
+      this._S = newS;
+    } else {
+      console.error("sisi harus lebih dari 0");
+    }
+  }
+
+  get sisi() {
+    return this._S;
+  }
+
+  get luas() {
+    return this._S * this._S;
+  }
+
+  get keliling() {
+    return this._S * 4;
+  }
+}
+
+const persegi1 = new persegi(10);
+const persegi2 = new persegi("hello word");
+
+console.log(`Sisi ${persegi1.sisi}`);
+console.log(`Luas ${persegi1.luas}`);
+console.log(`Keliling ${persegi1.keliling}`);
+
+console.log(`Sisi ${persegi2.sisi}`);
