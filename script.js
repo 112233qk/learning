@@ -1149,6 +1149,7 @@ console.log(book1);
 console.log(book2);
 */
 
+/*
 // getter = special method that makes a property readable
 // setter = special method that makes a property writeable
 
@@ -1188,3 +1189,39 @@ console.log(`Luas ${persegi1.luas}`);
 console.log(`Keliling ${persegi1.keliling}`);
 
 console.log(`Sisi ${persegi2.sisi}`);
+*/
+
+//destructuring = extract values from arrays and objects,
+//                then assign them to variable in a convinient way
+//                [] = to perform array destructuring
+//                {} = to perform object destructuring
+
+const nom = [1, 2, 3, 4, 5, 6];
+
+[nom[0], nom[4]] = [nom[4], nom[0]];
+
+const [one, two, tree, four, ...other] = nom;
+
+console.log(nom);
+console.log(one);
+console.log(two);
+console.log(tree);
+console.log(four);
+console.log(other);
+
+person1 = {
+  name: "banana",
+  age: 21,
+  job: "apple",
+};
+
+person2 = {
+  name: "coconut",
+  age: 21,
+};
+
+const { name, age, job = "No Job" } = person2;
+
+console.log(name);
+console.log(age);
+console.log(job);
