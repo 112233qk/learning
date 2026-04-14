@@ -1191,6 +1191,7 @@ console.log(`Keliling ${persegi1.keliling}`);
 console.log(`Sisi ${persegi2.sisi}`);
 */
 
+/*
 //destructuring = extract values from arrays and objects,
 //                then assign them to variable in a convinient way
 //                [] = to perform array destructuring
@@ -1225,3 +1226,35 @@ const { name, age, job = "No Job" } = person2;
 console.log(name);
 console.log(age);
 console.log(job);
+*/
+
+// nested object = object inside of another object.
+//                 Allows you to represent more complex data structures
+//                 Child object is enclosed by a Parent Object
+
+//                 Person {Addres{},ContactInfo{}}
+//                 ShoppingCart{keyboard{}, mouse{}, Monitor{}}
+
+class Person {
+  constructor(nama, umur, tempat, ...sekolah) {
+    this.nama = nama;
+    this.umur = umur;
+    this.tempat = tempat;
+    this.sekolah = new Sekolah(...sekolah);
+  }
+}
+
+class Sekolah {
+  constructor(nama, tempat) {
+    this.nama = nama;
+    this.tempat = tempat;
+  }
+}
+
+const person1 = new Person("budi", 18, "ciembe", "mandiri", "texas");
+
+console.log(person1);
+
+for (const info in person1) {
+  console.log(person1[info]);
+}
