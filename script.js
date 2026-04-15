@@ -1228,6 +1228,7 @@ console.log(age);
 console.log(job);
 */
 
+/*
 // nested object = object inside of another object.
 //                 Allows you to represent more complex data structures
 //                 Child object is enclosed by a Parent Object
@@ -1258,3 +1259,79 @@ console.log(person1);
 for (const info in person1) {
   console.log(person1[info]);
 }
+*/
+
+//ARRAY of OBJECT
+
+const something = [
+  { Name: "a", Number: 1, color: "red", Weight: 100 },
+  { Name: "b", Number: 2, color: "green", Weight: 300 },
+  { Name: "c", Number: 3, color: "yellow", Weight: 100 },
+  { Name: "d", Number: 4, color: "green", Weight: 500 },
+  { Name: "e", Number: 5, color: "red", Weight: 300 },
+];
+
+console.log(something);
+console.log("");
+
+// Access properties of a fruit object
+//console.log(something[0].color);
+//console.log(something[1].Number);
+//console.log(something[2].Name);
+
+// push() Add a new fruit object
+//something.push({ Name: "f", Number: 6, color: "green", Weight: 500 });
+//console.log(something);
+
+// pop() Remove the last fruit object
+//something.pop();
+//console.log(something);
+
+// splice() Remove fruit object by indices
+//something.splice(1, 2);
+//console.log(something);
+
+// for each()
+//something.forEach((nothing) => console.log(nothing));
+//console.log("");
+//something.forEach((nothing) => console.log(nothing.Name));
+//console.log("");
+//something.forEach((nothing) => console.log(nothing.Number));
+//console.log("");
+//something.forEach((nothing) => console.log(nothing.color));
+//console.log("");
+
+// map()
+//const somethingNames = something.map((nothing) => nothing.Name);
+//console.log(somethingNames);
+//console.log("");
+
+//const somethingNumbers = something.map((nothing) => nothing.Number);
+//console.log(somethingNumbers);
+//console.log("");
+
+//const somethingColors = something.map((nothing) => nothing.color);
+//console.log(somethingColors);
+//console.log("");
+
+// filter()
+//const somethingWeight = something.filter((nothing) => nothing.Weight === 100);
+//console.log(somethingWeight);
+//console.log("");
+
+//const somethingColors = something.filter((nothing) => nothing.color === "red");
+//console.log(somethingColors);
+//console.log("");
+
+//reduce()
+//const somethingBiggest = something.reduce((max, nothing) =>
+//  nothing.Weight > max.Weight ? nothing : max
+//);
+//console.log(somethingBiggest);
+//console.log("");
+
+//const somethingSmallest = something.reduce((min, nothing) =>
+//  nothing.Weight < min.Weight ? nothing : min
+//);
+//console.log(somethingSmallest);
+//console.log("");
