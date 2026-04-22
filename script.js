@@ -1261,6 +1261,7 @@ for (const info in person1) {
 }
 */
 
+/*
 //ARRAY of OBJECT
 
 const something = [
@@ -1335,3 +1336,25 @@ console.log("");
 //);
 //console.log(somethingSmallest);
 //console.log("");
+*/
+
+// sort() = method used to sort elements of an array in place.
+//          Sorts elements as strings in lexicographic order, not alphabetical
+//          lexicographic = (alphabet + numbers + symbols) as strings
+
+const numb = [1, 32, 3, 2, 8, 4];
+
+numb.sort((a, b) => a - b);
+
+console.log(numb);
+
+const text = [
+  { name: "a", age: 7, score: 30 },
+  { name: "b", age: 5, score: 60 },
+  { name: "c", age: 12, score: 40 },
+  { name: "s", age: 154, score: 120 },
+];
+
+text.sort((a, b) => b.score - a.score);
+
+console.log(text);
