@@ -1338,6 +1338,7 @@ console.log("");
 //console.log("");
 */
 
+/*
 // sort() = method used to sort elements of an array in place.
 //          Sorts elements as strings in lexicographic order, not alphabetical
 //          lexicographic = (alphabet + numbers + symbols) as strings
@@ -1358,3 +1359,4 @@ const text = [
 text.sort((a, b) => b.score - a.score);
 
 console.log(text);
+*/
